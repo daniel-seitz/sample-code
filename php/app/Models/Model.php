@@ -37,6 +37,7 @@ abstract class Model
     /**
      * Return a specific Model
      *
+     * @throws Exception if no model is found
      * @return model
      */
     public static function get($id)

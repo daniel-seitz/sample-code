@@ -1,12 +1,12 @@
 {
-	"author": "Daniel Seitz",
+    "author": "Daniel Seitz",
     "name": "Daniel-Seitz/SamplePhpProject",
     "description": "This is sample code to demontrate my programming style.",
     "license": "MIT",
     "autoload": {
-    	"psr-4": {
-    		"App\\": "app/"
-    	}
+        "psr-4": {
+            "App\\": "app/"
+        }
     },
     "require": {},
     "require-dev": {}

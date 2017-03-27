@@ -7,7 +7,7 @@ require __DIR__.'/../routes.php';
 $scriptName = explode('/', $_SERVER['SCRIPT_NAME']);
 $uri = explode('/', $_SERVER['REQUEST_URI']);
 
-foreach($scriptName as $index => $part){
+foreach($scriptName as $index => $part) {
 	if($part == $uri[$index]) unset($uri[$index]);
 }
 
