@@ -1,0 +1,21 @@
+<IfModule mod_headers.c>
+   RequestHeader unset Proxy
+   Header set X-Content-Type-Options nosniff
+</IfModule>
+
+<IfModule mod_negotiation.c>
+    Options -MultiViews
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    # Switch on the Rewrite Engine
+    RewriteEngine On
+
+    # Header for Authentication
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+
+    # All requests go to index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
